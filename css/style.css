@@ -3772,6 +3772,7 @@ textarea.form-control-lg {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -3863,7 +3864,12 @@ textarea.form-control-lg {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
 }
-
+@media (max-width:769px) {
+  .navbar > .container
+   {  position: relative;
+    bottom: 30px;}
+  
+}
 @media (min-width: 576px) {
   .navbar-expand-sm {
     flex-wrap: nowrap;
@@ -10885,9 +10891,9 @@ p {
 }
 
 #mainNav {
-  padding-top: 1rem;
+  padding-top: 0rem;
   padding-bottom: 0rem;
-  background-color: #b58a0ad9;
+  background-color: #000000d9;
 }
 #mainNav .navbar-toggler {
   padding: 0.70rem;
