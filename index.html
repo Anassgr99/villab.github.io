@@ -16,7 +16,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="dist/css/bootstrap.min.css">
         <script src="dist/js/bootstrap.bundle.js"></script>
-        <script src="js/script.js"></script>
+        <script defer src="js/script.js"> </script>
 
         
 
@@ -47,7 +47,7 @@
     background-image:url("img/backCom.png");
     background-repeat: no-repeat;
     background-size: cover;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  
 }
 .wtp{position: fixed;bottom: 4px;right: 4px ;width: 5%; }
 @media (min-width: 20px ) and (max-width: 450px){
@@ -55,6 +55,18 @@
 }
 @media (min-width: 450px ) and (max-width: 900px){
 .wtp{width: 10%;}
+}
+
+.box{
+transform: translateX(400%);
+transition: transform 1s ease;
+
+}
+.box:nth-of-type(even){
+transform: translateX(-400%);
+}   
+.box.show {
+transform: translateX(0);
 }
         </style>
     </head>
@@ -78,12 +90,12 @@
                     </ul>
                 </div>
             </div>
-            <a href="https://wa.link/hrd9fj"><img class="wtp" src = "img/Gwtp.svg"  alt="whatsap" /></a>
+            <a href="https://wa.link/hrd9fj"><img class="wtp" src = "img/Gwtp.svg"  alt="whatsap" style=" "/></a>
 
         </nav>
 
         <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead ">
             <div class="container">
                 <div class="masthead-subheading">Welcome To Our </div>
                 <div class="masthead-heading text-uppercase">A magical place, so that your event remains a timeless memory</div>
@@ -92,18 +104,18 @@
         </header>
            
 
-        <section class="page-section section" >
+        <section class="page-section section " >
             <br><br><br>
         <div class="container">
             <div class="row">
-              <div class="col">
+              <div class="box col ">
                 <div class="text-container">
                     <h1 >Un luogo magico, perchè il tuo evento rimanga un ricordo senza tempo</h1>
                     <p style="  color: black;">Villa delle Oche è la location perfetta per rendere magico il vostro matrimonio. Caratterizzata da rustici dettagli architettonici in stile vicentino, questa villa è la cornice da sogno che stavate cercando.
                         Circondata da grandi siepi garantisce il massimo della privacy, il grande parco esterno dà infatti molta possibilità di muoversi regalando ampi spazi ai vostri invitati. A renderla unica inoltre, la piscina esterna, essenziale per le giornate d’estate.</p>
                 </div>
               </div>
-              <div class="col">
+              <div class="box col ">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -188,42 +200,58 @@
               </div>
             </div>
         </section>
+
+
+
+          
         
         <!-- Services-->
-        <section class="page-section section" id="services">
+        <section class="page-section section hidden" id="services">
             <div class="bg_service"> 
-            <div class="container">
                 <div class="text-center">
+                    <br><br><br>
                     <h2 class="section-heading text-uppercase">services</h2>
                     <h3 class="section-subheading text-muted">Our services</h3>
                 </div>
+            <div class="container">
+                <div class="row">
+                <div class="col box">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/sevices/2.jpg" alt="Weddings" class="rounded-circle">
+                        </div>
+                        <h4 class="my-3">Weddings</h4>
+                        <p class="text-muted">A romantic and evocative setting where you can get married and organize unforgettable outdoor receptions.</p>
+                    </div>
+                  </div>
+                  <div class="col box">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/sevices/1.jpg" alt="Private Parties" class="rounded-circle">
+                        </div>
+                        <h4 class="my-3">Private parties</h4>
+                        <p class="text-muted">Our refined and evocative internal and external spaces will be the perfect location for your party, from birthdays, stag parties to graduation parties.</p>
+                    </div>
+                  </div>
+                  <div class="col box"> 
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="img/sevices/3.jpg" alt="Corporate Events" class="rounded-circle">
+                        </div>
+                        <h4 class="my-3">Corporate Events</h4>
+                        <p class="text-muted">Our internal and external spaces will adapt with great versatility to any need and type of event: from conferences to corporate meetings.</p>
+                    </div>
+                  </div>
+                    </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="img/sevices/2.jpg" alt="Weddings" class="rounded-circle">
-                            </div>
-                            <h4 class="my-3">Weddings</h4>
-                            <p class="text-muted">A romantic and evocative setting where you can get married and organize unforgettable outdoor receptions.</p>
-                        </div>
+
                     </div>
                     <div class="col-md-4">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="img/sevices/1.jpg" alt="Private Parties" class="rounded-circle">
-                            </div>
-                            <h4 class="my-3">Private parties</h4>
-                            <p class="text-muted">Our refined and evocative internal and external spaces will be the perfect location for your party, from birthdays, stag parties to graduation parties.</p>
-                        </div>
+
                     </div>
                     <div class="col-md-4">
-                        <div class="service-item">
-                            <div class="service-image">
-                                <img src="img/sevices/3.jpg" alt="Corporate Events" class="rounded-circle">
-                            </div>
-                            <h4 class="my-3">Corporate Events</h4>
-                            <p class="text-muted">Our internal and external spaces will adapt with great versatility to any need and type of event: from conferences to corporate meetings.</p>
-                        </div>
+
                     </div>
                 </div>
                 </div>
@@ -234,15 +262,15 @@
         <!-- Portfolio Grid-->
         <section class="page-section bg-light section hidden" id="collab">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center ">
                     <br><br><h2 class="section-heading text-uppercase">
                         Collaborazioni</h2>
                     <h3 class="section-subheading text-muted">Partners</h3>
                 </div>
-                <div class="row">
+                <div class="row ">
                     <div class="col-lg-4 col-sm-6 mb-4">
                       
-                        <div class="portfolio-item">
+                        <div class="portfolio-item box">
                             
                                 <img class="img-fluid" src="img/P1.jpg" alt="..." />
                          
@@ -250,14 +278,14 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                      
-                        <div class="portfolio-item">
+                        <div class="portfolio-item box">
                             <img class="img-fluid" src="img/P2.png" alt="..." />
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
                   
-                        <div class="portfolio-item">
+                        <div class="portfolio-item box">
                             <img class="img-fluid" src="img/P3.png" alt="..." />
                             </a>
                         </div>
@@ -269,22 +297,22 @@
 
         <!--  comment-->
 
-        <section class="bg_service" id="review" >
+        <section class="bg_service " id="review" >
            
             <div class="container text-center">
                 <h1 style="  font-family: 'Sofia', sans-serif; color: #b58a0ad9; font-size: xx-large;">#Vos_commentaire</h1>
                 <div class="row">
-                    <div class="col">
+                    <div class="col box">
                         
                         <img src="img/1.jpg" alt="Jane" style="width:100%">
         
                     </div>
-                    <div class="col">
+                    <div class="col box">
                         
                         <img src="img/2.jpg" alt="Jane" style="width:100%">
         
                     </div>
-                    <div class="col">
+                    <div class="col box">
                         
                         <img src="img/3.jpg" alt="Jane" style="width:100%">
         
@@ -336,7 +364,7 @@
            </div>
        <!-- About-->
 
-       <section class="page-section section hidden" id="contact">
+       <section class="page-section section" id="contact">
         <div class="contact_section layout_padding">
        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
         <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
@@ -415,7 +443,7 @@
 
 
 
-<section class="page-section section hidden" >
+<section class="page-section section " >
 
     <!-- footer section start -->
     <div class="footer_section layout_padding" id="footer">
@@ -508,18 +536,19 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
          <script>
-            window.addEventListener('scroll', () => {
-                const sections = document.querySelectorAll('.section');
-                const scrollPos = window.scrollY + window.innerHeight;
-     
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const isVisible = (scrollPos >= sectionTop - sectionHeight / 3) && (scrollPos <= sectionTop + sectionHeight);
-                    section.classList.toggle('hidden', !isVisible);
-                });
-            });
-        </script>
+const boxes = document. querySelectorAll('.box');
+
+window.addEventListener('scroll', checkBoxes);
+function checkboxes() { const triggerBottom = window. innerHeight / 5*4;
+
+boxes.forEach((box) ⇒ { const boxTop = box. getBoundingClientRect().top;
+
+if (boxTop < triggerBottom) { box.classList.add('show');
+
+} else { box.classList.remove('show'); }
+});
+}
+</script>
 
     </body>
 </html>
