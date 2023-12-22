@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Villa Bortolazzi</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <script src="dist/js/bootstrap.bundle.js"></script>
+        <script defer src="js/script.js"> </script>
+
+        
+
+        <link href="css/style.css" rel="stylesheet" />
+        <style>
+            .btn_contact { 
+    background-color: #86754C; 
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    position: fixed; 
+    bottom: 50%;left:0px; 
+    display: block; 
+    z-index: 1000; } 
+  .btn_contact:hover { 
+    color: white;
+   background-color: #051606;
+    }
+    #rotate{
+  vertical-align:top;
+	transform:rotate(7deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */}
+.bg_service{
+    background-image:url("img/backCom.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+.wtp{position: fixed;bottom: -10px;
+  right: -7px;
+  width: 7%; }
+.fb{position: fixed;bottom: 60px;
+  right: 7px;
+  width: 5%;
+}
+.insta{position: fixed;bottom: 115px;
+  right: 4px;
+  width: 5.5%; }
+@media (min-width: 20px ) and (max-width: 450px){
+.wtp{width: 20%;}
+}
+@media (min-width: 450px ) and (max-width: 900px){
+.wtp{width: 10%;}
+}
+
+.box{
+transform: translateX(400%);
+transition: transform 1s ease;
+
+}
+.box:nth-of-type(even){
+transform: translateX(-400%);
+}   
+.box.show {
+transform: translateX(0);
+}
+        </style>
+    </head>
+    <body id="page-top" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+       
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container" >
+                <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="villa " /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Review</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#storia">Storia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://www.facebook.com/villabortolazzi10/" target="_blank"><img class="fb" src = "img/fb.png"  alt="whatsap" style=" "/></a>
+            <a href="https://www.instagram.com/villa.bortolazzi/" target="_blank"><img class="insta" src = "img/insta.png"  alt="whatsap" style=" "/></a>
+            <a href="https://wa.link/hrd9fj" target="_blank"><img class="wtp" src = "img/wtp.png"  alt="whatsap" style=" "/></a>
+
+        </nav>
+        <a class="btn_contact" id="rotate" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            Contact Us
+           </a>
+           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+               <div style="display:flex; flex-direction: row; justify-content: space-around;">
+                   <img src="img/Wlogo.png"  style="width: 50%;" >
+                 </div>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <form id="contactForm">
+                   <div class="mb-3">
+                     <label class="form-label" for="name">Name</label>
+                     <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                   </div>
+                   <div class="mb-3">
+                     <label class="form-label" for="emailAddress">Email Address</label>
+                     <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                   </div>
+                   <div class="mb-3">
+                     <label class="form-label" for="emailAddress">Subject</label>
+                     <input class="form-control" id="subjrct" type="subject" placeholder="Subject" data-sb-validations="required, email" />
+                   </div>
+                   <div class="mb-3">
+                     <label class="form-label" for="message">Message</label>
+                     <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                   </div>
+                   <div class="d-grid">
+                     <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                   </div>
+                 </form>
+       
+            </div>
+          </div>
+<br>
+<br><br><br><br>
+
+<section class="about" data-aos="fade-up">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="img/Foto/1.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <p class="fst-italic">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua.
+          </p>
+          <ul>
+            <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+            <li><i class="bi bi-check2-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+            <li><i class="bi bi-check2-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+          </ul>
+          <p>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<br><br><br>
+
+        <!-- <section class="page-section section hidden" id="contact">
+            <div class="contact_section layout_padding">
+                <div class="container-fluid">
+                   <div class="row">
+ 
+                      <div class="col-md-6">
+                         <div class="map_main">
+                            <div class="map-responsive">
+                               <iframe
+                                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France"
+                                  width="1000" height="600" frameborder="0" style="border:0; width: 100%;"
+                                  allowfullscreen=""></iframe>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+        </section>
+        -->
+        
+        <!-- Team
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="1.jpg" alt="..." />
+                            <h4>Parveen Anand</h4>
+                            <p class="text-muted">Lead Designer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="2.jpg" alt="..." />
+                            <h4>Diana Petersen</h4>
+                            <p class="text-muted">Lead Marketer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="3.jpg" alt="..." />
+                            <h4>Larry Parker</h4>
+                            <p class="text-muted">Lead Developer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                </div>
+            </div>
+        </section>
+-->
+    
+
+
+
+
+<section class="page-section section " >
+
+    <!-- footer section start -->
+    <div class="footer_section layout_padding" id="footer">
+       <div class="container1">
+          <div class="newsletter_section">
+             <div class="newsletter_left">
+                <div class="footer_logo"><img src="img/logo.png"></div>
+             </div>
+    
+             <div class="social_icon">
+                <h1 class="follow_text">Follow Us</h1>
+                <ul>
+                   <li><a href="https://www.facebook.com/villabortolazzi10/" target="_blank"><img src="img/fb-icon.png"></a></li>
+                   <li><a href="https://www.instagram.com/villa.bortolazzi/" target="_blank"><img src="img/instagram-icon.png"></a></li>
+                </ul>
+             </div>
+    
+          </div>
+          <div class="footer_taital_main box">
+             <div class="row">
+                   <div class="col-lg-3 col-sm-6">
+                       <h2 class="useful_text">About</h2>
+                       <p class="">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                       dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                   </div>
+                   <div class="col-lg-3 col-sm-6 box">
+                       <h2 class="useful_text">Menus</h2>
+                       <div class="footer_links box">
+                       <ul>
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="services.html">Services</a></li>
+                           <li><a href="pricing.html">Pricing</a></li>
+                           <li><a href="contact.html">Contact us</a></li>
+                       </ul>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-sm-6 box">
+                       <h2 class="useful_text">Useful Link</h2>
+                       <div class="footer_links">
+                       <ul>
+                           <li><a href="#">Services</a></li>
+                           <li><a href="#">Collaborazioni</a></li>
+                           <li><a href="#">Review </a></li>
+                           <li><a href="#">Contact</a></li>
+                           <li><a href="#">About</a></li>
+                       </ul>
+                       </div>
+                   </div>
+                   <div class="col-lg-3 col-sm-6 box">
+                       <h2 class="useful_text">Contact us</h2>
+                       <div class="addres_link">
+                       <ul>
+                           <li><a href="#"><img src="img/map-icon.png"><span class="padding_left_10"> Località Acquaviva, 10 – 38123 Mattarello di Trento – TN</span></a></li>
+                           <li><a href="#"><img src="img/call-icon.png"><span class="padding_left_10"> +39 348 76 95 028</span></a></li>
+                           <li><a href="#"><img src="img/mail-icon.png"><span
+                                   class="padding_left_10"> acquaviva@villabortolazzi.it</span></a></li>
+                       </ul>
+                       </div>
+                   </div>
+             </div>
+    
+          </div>
+       </div>
+    </div>
+    
+       <!-- footer section end -->
+       <!-- copyright section start -->
+       <div class="copyright_section">
+          <div class="container1">
+             <p class="copyright_text">Copyright 2023 All Right Reserved By. Distegned by. <a href="https://www.linkedin.com/in/anass-el-garadi-a54405217/">Anass </a> </p>
+          </div>
+       </div>
+    
+   </section>
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+        <!-- Bootstrap core JS-->
+        <script src="dist/js/bootstrap.bundle.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+         <script>
+const boxes = document. querySelectorAll('.box');
+
+window.addEventListener('scroll', checkBoxes);
+function checkboxes() { const triggerBottom = window. innerHeight / 5*4;
+
+boxes.forEach((box) ⇒ { const boxTop = box. getBoundingClientRect().top;
+
+if (boxTop < triggerBottom) { box.classList.add('show');
+
+} else { box.classList.remove('show'); }
+});
+}
+</script>
+
+    </body>
+</html>
